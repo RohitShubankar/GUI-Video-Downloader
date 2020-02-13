@@ -6,6 +6,8 @@ A simple python based gui application to download videos from youtube.
 import tkinter as tk
 import os
 import youtube_dl
+from tkinter import *
+from tkinter.ttk import *
 
 def get_video_url():
    search_item = download_entry.get()
@@ -19,6 +21,9 @@ def get_video_url():
     ydl.download([search_item])
 
 root = tk.Tk()
+pic = PhotoImage(file ='C://Users//rohit//Documents//GitHub//GUI-Video-Downloader//index.jpg')
+root.iconphoto(False,pic)
+root.title('Video Downloader')
 canvas1 = tk.Canvas(root,height = 400, width=400, bg="grey")
 canvas1.pack()
 download_entry = tk.Entry(root)
