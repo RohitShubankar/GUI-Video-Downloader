@@ -11,12 +11,12 @@ def get_video_url():
    search_item = download_entry.get()
    ydl_opts = {
       'format': 'best',
-      'outtmpl': 'C:/Users/rohit/Desktop/download/'+'.mp4',
       'noplaylist': True,
       'extract-audio': True,
    }
+   os.chdir('C:/Users/rohit/Desktop/download')
    with youtube_dl.YoutubeDL(ydl_opts) as ydl:
-    ydl.download([search_item]) 
+    ydl.download([search_item])
 
 root = tk.Tk()
 canvas1 = tk.Canvas(root,height = 400, width=400, bg="grey")
